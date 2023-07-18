@@ -6,19 +6,20 @@
 </head>
 <body>
 <script>
-let a=[1,5,3,4];
-let b=0;
-let c= a.length -1;
-while (b<c){
-    let i= a[b]
-    a[b]=a[c]
-    a[c]=i
-    b++;
-    c--;
-}
+    let x=["a","b"];
+    let temp;
+    for (let i = 0; i < x.length-1; i++) {
+        for (let j = 0; j < x.length-1; j++) {
+            if (x[j]<x[j+1]){
+                //nếu muốn ngược thay dấu >
+               temp=x[j+1];
+               x[j+1]=x[j];
+               x[j]=temp;
+            }
+        }
 
-document.write(a)
-
+    }
+    document.write(x)
 </script>
 </body>
 </html>
