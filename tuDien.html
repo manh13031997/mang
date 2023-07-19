@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="nn">
+<button type="button" onclick="manh()">click</button>
+<h1 id="aa"></h1>
+<script>
+  function manh(){
+      let temp= document.getElementById("nn").value
+    let vietNam=['tao','chuối'];
+    let tiengAnh=['apple', 'banana'];
+    let max = -1;
+      for (let i = 0; i < tiengAnh.length; i++) {
+              if (tiengAnh[i] ==temp){
+                  max = i
+              }
+          }
+      if (max== -1){
+          document.getElementById('aa').innerHTML="không có giá trị"
+      }else {
+          document.getElementById('aa').innerHTML= vietNam[max]
+
+      }
+
+  }
+</script>
+</body>
+</html>
